@@ -33,14 +33,27 @@ public class FlightCollection {
 	{
     	//SELECT a flight where depart_to = city
     	Flight flight = null;
-		return null;
+		for (Flight f : flights)
+		{
+			if (f.getDepartFrom().equals(city))
+			{
+				flight = f;
+			}
+		}
+		return flight;
     }
     public static Flight getFlightInfo(int flight_id)
 	{
     	//SELECT a flight with a particular flight id
-    	return null;
+    	Flight flight =  null;
 
+		for (Flight f : flights)
+		{
+			if (f.getFlightID() == flight_id)
+			{
+				flight = f;
+			}
+		}
+		return flight;
     }
-    
-
 }
