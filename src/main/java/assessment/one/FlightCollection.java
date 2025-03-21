@@ -19,14 +19,16 @@ public class FlightCollection {
 	public static Flight getFlightInfo(String city1, String city2)
 	{
     	//display the flights where there is a direct flight from city 1 to city2
-    	for (Flight flight : flights)
+		Flight flight = null;
+    	for (Flight f : flights)
 		{
-			if (flight.getDepartFrom().equals(city1) && flight.getDepartTo().equals(city2))
+			if (f.getDepartFrom().equals(city1) && f.getDepartTo().equals(city2))
 			{
-				System.out.println(flight.toString());
+				System.out.println(f.toString());
+				flight = f;
 			}
 		};
-		return null;
+		return flight;
     }
     
     public static Flight getFlightInfo(String city)
@@ -42,6 +44,7 @@ public class FlightCollection {
 		}
 		return flight;
     }
+
     public static Flight getFlightInfo(int flight_id)
 	{
     	//SELECT a flight with a particular flight id

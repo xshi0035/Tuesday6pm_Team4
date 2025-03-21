@@ -1,4 +1,4 @@
-package Fit5171.infotech.monash;
+package assessmentOne;
 
 import assessment.one.Airplane;
 import assessment.one.Flight;
@@ -54,4 +54,5 @@ public class AssignmentTestCase{
         assertTrue(result.contains("BA202"));
         assertTrue(result.contains("British Airways"));
     }
+
 }

@@ -25,8 +25,7 @@ public class TicketSystem
         }
         catch (NullPointerException e)
         {
-            e.printStackTrace();
-            return;
+            System.out.println("No flight details available : " + e.getMessage());
         }
     }
 
@@ -279,8 +278,7 @@ public class TicketSystem
     }
 
     // Method for choosing a ticket based on cities
-    public void chooseTicket(String city1, String city2) throws Exception
-    {
+    public void chooseTicket(String city1, String city2) throws Exception {
         int counter = 1;
         int idFirst = 0;
         int idSecond = 0;
@@ -311,5 +309,4 @@ public class TicketSystem
             }
         }
     }
-    
 }

@@ -13,7 +13,10 @@ public class Flight {
     private Timestamp dateTo;
     Airplane airplane;
     
-    public Flight(){}
+    public Flight()
+    {
+
+    }
 
     public Flight(int flight_id, String departTo, String departFrom, String code, String company, Timestamp dateFrom,Timestamp dateTo, Airplane airplane)
     {
