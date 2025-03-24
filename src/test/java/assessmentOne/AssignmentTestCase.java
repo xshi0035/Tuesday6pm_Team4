@@ -2,14 +2,23 @@ package assessmentOne;
 
 import assessment.one.Airplane;
 import assessment.one.Flight;
+import assessment.one.FlightCollection;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for validating Flight and Airplane initialization and functionality {@link Flight}.
+ */
 public class AssignmentTestCase{
 
+    /**
+     * Test for verifying proper initialization of a Flight object.
+     */
     @Test
+    @DisplayName("Test Flight Initialization with All Attributes")
     public void testFlightInitialization() {
         // Create an Airplane instance for the flight
         Airplane airplane = new Airplane(1, "Boeing 747", 10, 100, 8);
@@ -32,7 +41,11 @@ public class AssignmentTestCase{
         assertEquals(airplane, flight.getAirplane());
     }
 
+    /**
+     * Test for verifying the string representation of a Flight object.
+     */
     @Test
+    @DisplayName("Test Flight toString Method for Correct Output")
     public void testFlightToString() {
         // Create an Airplane instance for the flight
         Airplane airplane = new Airplane(2, "Airbus A380", 12, 150, 10);

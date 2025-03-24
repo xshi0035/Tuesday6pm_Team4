@@ -3,6 +3,7 @@ package assessmentOne;
 import assessment.one.Airplane;
 import assessment.one.Flight;
 import assessment.one.FlightCollection;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
@@ -10,6 +11,9 @@ import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Unit tests for the FlightCollection class {@link FlightCollection}.
+*/
 public class FlightCollectionTest
 {
     private Flight flightOne;
@@ -18,7 +22,11 @@ public class FlightCollectionTest
     private Flight flightFour;
     private FlightCollection flightCollection;
 
+    /**
+     * Sets up test data before each test execution.
+     */
     @BeforeEach
+    @DisplayName("Initialize test data for flights and FlightCollection")
     public void setUp()
     {
         FlightCollection.flights = new ArrayList<>();
@@ -54,21 +62,33 @@ public class FlightCollectionTest
     }
 
 
+    /**
+     * Test to verify flight retrieval using flight ID.
+     */
     @Test
+    @DisplayName("Retrieve flight by Flight ID")
     public void testGetFlightInfoWithFlightID()
     {
        Flight actualFlight = FlightCollection.getFlightInfo(104);
        assertEquals(flightFour, actualFlight);
     }
 
+    /**
+     * Test to verify flight retrieval using departure and arrival cities.
+     */
     @Test
+    @DisplayName("Retrieve flight by Departure and Arrival Cities")
     public void testGetFlightInfoWithTwoCities()
     {
         Flight actualFlight = FlightCollection.getFlightInfo("Melbourne", "Perth");
         assertEquals(flightThree, actualFlight);
     }
 
+    /**
+     * Test to verify flight retrieval using a single city.
+     */
     @Test
+    @DisplayName("Retrieve flight by Single City (Arrival City)")
     public void testGetFLightInfoWithOneCity()
     {
         Flight actualFlight = FlightCollection.getFlightInfo("Darwin");
