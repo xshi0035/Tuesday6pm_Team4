@@ -2,7 +2,6 @@ package assessmentOne;
 
 import assessment.one.Airplane;
 import assessment.one.Flight;
-import assessment.one.FlightCollection;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.sql.Timestamp;
@@ -12,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Unit tests for validating Flight and Airplane initialization and functionality {@link Flight}.
  */
-public class AssignmentTestCase{
+public class FlightTest {
 
     /**
      * Test for verifying proper initialization of a Flight object.
@@ -67,5 +66,4 @@ public class AssignmentTestCase{
         assertTrue(result.contains("BA202"));
         assertTrue(result.contains("British Airways"));
     }
-
 }
