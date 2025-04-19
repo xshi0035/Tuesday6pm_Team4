@@ -1,4 +1,4 @@
-package assessment.one;
+package assessment;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
